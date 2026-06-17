@@ -8,6 +8,7 @@ const hasWebGL = () => {
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('hero-canvas-container');
   if (!container || !hasWebGL()) return;
+  const heroSection = document.getElementById('hero');
 
   const fallback = document.getElementById('hero-fallback');
   if (fallback) fallback.style.display = 'none';
@@ -98,16 +99,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', updateAspect);
 
-  container.addEventListener('pointermove', (e) => {
-    const rect = container.getBoundingClientRect();
-    mouse.targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-    mouse.targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-  });
+  if (heroSection) {
+    heroSection.addEventListener('pointermove', (e) => {
+      const rect = container.getBoundingClientRect();
+      mouse.targetX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+      mouse.targetY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+    });
 
-  container.addEventListener('pointerleave', () => {
-    mouse.targetX = 0;
-    mouse.targetY = 0;
-  });
+    heroSection.addEventListener('pointerleave', () => {
+      mouse.targetX = 0;
+      mouse.targetY = 0;
+    });
+  }
 
   window.addEventListener('deviceorientation', (e) => {
     if (e.beta !== null && e.gamma !== null) {
