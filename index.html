@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedro — Tatuagem Fineline e Microrealismo em Sorocaba</title>
+  <meta name="description" content="Tatuador especialista em traços finos (fineline) e microrealismo em Sorocaba/SP. Desenhos autorais exclusivos e ambiente com privacidade absoluta.">
+  <link rel="canonical" href="https://pedrotattoo3d.com.br/">
+  <meta property="og:type" content="website"><meta property="og:title" content="Pedro — Tatuagem Fineline e Microrealismo em Sorocaba"><meta property="og:description" content="Tatuador especialista em traços finos (fineline) e microrealismo em Sorocaba/SP. Desenhos autorais exclusivos e ambiente com privacidade absoluta."><meta property="og:url" content="https://pedrotattoo3d.com.br/"><meta property="og:image" content="https://pedrotattoo3d.com.br/assets/pedro-tattoo.jpg"><meta property="og:locale" content="pt_BR">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Pedro - Fineline & Microrealismo","image":"https://pedrotattoo3d.com.br/assets/pedro-tattoo.jpg","telephone":"+55-15-99660-3395","url":"https://pedrotattoo3d.com.br/","address":{"@type":"PostalAddress","addressLocality":"Sorocaba","addressRegion":"SP","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":"-23.5015","longitude":"-47.4526"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"20:00"},"priceRange":"$$"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script>tailwind.config = { theme: { extend: { fontFamily: { heading: ['"Space Grotesk"', 'system-ui', 'sans-serif'], body: ['Satoshi', 'system-ui', 'sans-serif'] } } } }</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script type="module" src="js/form.js"></script>
+  <script type="module" src="js/three-anatomy.js"></script>
+</head>
+<body class="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] font-body antialiased selection:bg-[var(--color-accent)] selection:text-[var(--color-text-inverse)]">
+  <header class="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-bg-secondary)]/90 backdrop-blur-md px-6 py-4 flex justify-between items-center">
+    <a href="#hero" class="font-heading font-bold text-xl tracking-wider text-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">PEDRO // 3D</a>
+    <nav class="flex gap-6 text-sm font-heading tracking-wide">
+      <a href="#tecnica" class="hover:text-[var(--color-accent)] transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">[ TÉCNICA ]</a>
+      <a href="#estudio" class="hover:text-[var(--color-accent)] transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">[ ESTÚDIO ]</a>
+      <a href="#orcamento" class="hover:text-[var(--color-accent)] transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">[ ORÇAMENTO ]</a>
+    </nav>
+  </header>
+  <main>
+    <section id="hero" class="relative min-h-[90vh] flex flex-col justify-center px-6 py-12 md:py-24 border-b border-[var(--color-border)] bg-[linear-gradient(rgba(9,13,22,0.8),rgba(9,13,22,0.8)),url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48cGF0aCBkPSJNMCAwaDQwdjQwSDBWMHoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFlMjkzYiIgc3Ryb2tlLXdpZHRoPSIwLjUiLz48L3N2Zz4=')]">
+      <div class="max-w-4xl mx-auto w-full flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 space-y-6">
+          <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-none tracking-tight">ARTE AUTORAL EXCLUSIVA E PRECISÃO CIRÚRGICA NA SUA PELE.</h1>
+          <p class="text-[var(--color-text-secondary)] text-lg md:text-xl leading-normal font-light">Traços finos que não estouram. Detalhes realistas que duram uma vida inteira. Projetado sob medida para a sua anatomia, sem cópias do Pinterest.</p>
+          <div class="pt-4"><a href="#orcamento" class="inline-block bg-[var(--color-accent)] text-[var(--color-text-inverse)] hover:bg-[var(--color-accent-hover)] transition-all font-heading font-bold px-8 py-4 tracking-wider shadow-[var(--shadow-md)] active:translate-x-1 active:translate-y-1 active:shadow-[var(--shadow-xs)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">[ ESCANEAR ANATOMIA & CRIAR PROJETO ]</a></div>
+        </div>
+        <div id="hero-canvas-container" class="flex-1 w-full aspect-square md:aspect-auto md:h-[450px] border border-[var(--color-border)] bg-[var(--color-bg-secondary)] relative overflow-hidden flex items-center justify-center">
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-primary)] to-transparent opacity-50 pointer-events-none"></div>
+          <div id="hero-fallback" class="text-[var(--color-text-muted)] font-heading text-xs uppercase tracking-widest">[ Canvas 3D Wireframe ]</div>
+        </div>
+      </div>
+    </section>
+    <section id="tecnica" class="px-6 py-16 md:py-24 border-b border-[var(--color-border)] bg-[var(--color-bg-primary)]">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <div class="max-w-3xl">
+          <span class="text-[var(--color-accent)] font-heading text-sm uppercase tracking-widest font-semibold">[ 01 / TÉCNICA ]</span>
+          <h2 class="font-heading font-bold text-3xl md:text-4xl mt-2 leading-tight">TÉCNICA CIRÚRGICA: POR QUE O SEU TRAÇO NÃO VAI ESTOURAR OU DESBOTAR</h2>
+          <p class="text-[var(--color-text-secondary)] mt-4 leading-normal">Pedro aplica um protocolo técnico rigoroso para garantir que sua arte continue nítida por décadas:</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <div class="p-6 border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-accent)] hover:shadow-[var(--shadow-sm)] transition-all duration-150"><h3 class="font-heading font-semibold text-lg text-[var(--color-accent)]">[01] Controle de Profundidade Micrométrico</h3><p class="text-[var(--color-text-secondary)] text-sm mt-2">A agulha penetra exatamente na derme papilar, prevenindo estouros ou desbotamentos prematuros.</p></div>
+            <div class="p-6 border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-accent)] hover:shadow-[var(--shadow-sm)] transition-all duration-150"><h3 class="font-heading font-semibold text-lg text-[var(--color-accent)]">[02] Pigmentação de Alta Saturação</h3><p class="text-[var(--color-text-secondary)] text-sm mt-2">Uso de tintas pretas ultra-concentradas e agulhas de calibre 03RL e 01RL (as mais finas do mercado).</p></div>
+            <div class="p-6 border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-accent)] hover:shadow-[var(--shadow-sm)] transition-all duration-150"><h3 class="font-heading font-semibold text-lg text-[var(--color-accent)]">[03] Estudo de Cicatrização Ciclo-Fase</h3><p class="text-[var(--color-text-secondary)] text-sm mt-2">Acompanhamento pós-tattoo dedicado passo a passo para regeneração celular e fixação de cor ideal.</p></div>
+          </div>
+          <div class="border border-[var(--color-border)] bg-[var(--color-bg-secondary)] aspect-[4/3] relative flex items-center justify-center overflow-hidden">
+            <div class="text-[var(--color-text-muted)] font-heading text-xs uppercase tracking-widest">[ Macrofotografia Traço Cicatrizado ]</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="estudio" class="px-6 py-16 md:py-24 border-b border-[var(--color-border)] bg-[var(--color-bg-secondary)]">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <div class="max-w-3xl">
+          <span class="text-[var(--color-accent)] font-heading text-sm uppercase tracking-widest font-semibold">[ 02 / EXPERIÊNCIA ]</span>
+          <h2 class="font-heading font-bold text-3xl md:text-4xl mt-2 leading-tight">OPOSTO DOS ESTÚDIOS DE RUA: UM SANTUÁRIO PRIVADO PARA A SUA SESSÃO</h2>
+          <p class="text-[var(--color-text-secondary)] mt-4 leading-normal">Pedro atende individualmente em um espaço projetado para foco, privacidade e relaxamento:</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 border border-[var(--color-border)] bg-[var(--color-bg-primary)]"><span class="text-xs font-heading text-[var(--color-text-muted)] uppercase tracking-wider">// PRIVACIDADE</span><h3 class="font-heading font-semibold text-lg mt-2 text-[var(--color-accent)]">Atendimento Exclusivo</h3><p class="text-[var(--color-text-secondary)] text-sm mt-2">Apenas um cliente por vez, com hora marcada e privacidade total durante a sessão.</p></div>
+          <div class="p-6 border border-[var(--color-border)] bg-[var(--color-bg-primary)]"><span class="text-xs font-heading text-[var(--color-text-muted)] uppercase tracking-wider">// BIOSSEGURANÇA</span><h3 class="font-heading font-semibold text-lg mt-2 text-[var(--color-accent)]">Padrão Hospitalar</h3><p class="text-[var(--color-text-secondary)] text-sm mt-2">Protocolos cirúrgicos de biossegurança e esterilização de altíssima segurança.</p></div>
+          <div class="p-6 border border-[var(--color-border)] bg-[var(--color-bg-primary)]"><span class="text-xs font-heading text-[var(--color-text-muted)] uppercase tracking-wider">// AMBIENTE</span><h3 class="font-heading font-semibold text-lg mt-2 text-[var(--color-accent)]">Conforto Premium</h3><p class="text-[var(--color-text-secondary)] text-sm mt-2">Climatização controlada, isolamento acústico total e cafés selecionados moídos na hora.</p></div>
+        </div>
+      </div>
+    </section>
+    <section id="orcamento" class="px-6 py-16 md:py-24 bg-[var(--color-bg-primary)]">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <div class="max-w-3xl">
+          <span class="text-[var(--color-accent)] font-heading text-sm uppercase tracking-widest font-semibold">[ 03 / AGENDAR ]</span>
+          <h2 class="font-heading font-bold text-3xl md:text-4xl mt-2 leading-tight">SIMULE O LOCAL E ORCE O SEU PROJETO EXCLUSIVO</h2>
+          <p class="text-[var(--color-text-secondary)] mt-4 leading-normal">Defina onde a arte ficará no seu corpo pelo simulador anatômico 3D ou use os botões de fallback abaixo.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <form class="space-y-6 border border-[var(--color-border)] p-8 bg-[var(--color-bg-secondary)]" onsubmit="event.preventDefault();">
+            <input type="hidden" name="localizacao" id="localizacao-input" value="Não especificado">
+            <div>
+              <label class="block text-xs font-heading uppercase text-[var(--color-text-secondary)] tracking-wider mb-2">Como prefere ser chamado(a)?</label>
+              <input type="text" name="nome" placeholder="Seu nome aqui" required class="w-full bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] focus:border-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] px-4 py-3 text-[var(--color-text-primary)] transition-colors duration-150">
+            </div>
+            <div>
+              <label class="block text-xs font-heading uppercase text-[var(--color-text-secondary)] tracking-wider mb-2">Qual seu WhatsApp para retorno?</label>
+              <input type="tel" name="whatsapp" id="whatsapp-input" placeholder="(00) 99999-9999" required class="w-full bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] focus:border-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] px-4 py-3 text-[var(--color-text-primary)] transition-colors duration-150">
+            </div>
+            <div>
+              <label class="block text-xs font-heading uppercase text-[var(--color-text-secondary)] tracking-wider mb-2">Qual estilo melhor define sua ideia?</label>
+              <div class="space-y-2 mt-2">
+                <label class="flex items-center gap-3 cursor-pointer text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"><input type="radio" name="estilo" value="Fineline Autoral" checked class="accent-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"> Fineline Autoral (traços finos e delicados)</label>
+                <label class="flex items-center gap-3 cursor-pointer text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"><input type="radio" name="estilo" value="Microrealismo" class="accent-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"> Microrealismo (detalhes fotográficos em escala reduzida)</label>
+                <label class="flex items-center gap-3 cursor-pointer text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"><input type="radio" name="estilo" value="Fusão" class="accent-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"> Fusão (fineline com detalhes realistas integrados)</label>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-heading uppercase text-[var(--color-text-secondary)] tracking-wider mb-2">Tamanho aproximado (em centímetros)</label>
+              <input type="text" name="tamanho" placeholder="Ex: 8 cm de altura por 4 cm de largura" required class="w-full bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] focus:border-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] px-4 py-3 text-[var(--color-text-primary)] transition-colors duration-150">
+            </div>
+            <div>
+              <label class="block text-xs font-heading uppercase text-[var(--color-text-secondary)] tracking-wider mb-2">Descreva os elementos que gostaria na arte</label>
+              <textarea name="descricao" rows="3" placeholder="Ex: Uma bússola geométrica integrada com uma rosa dos ventos..." required class="w-full bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] focus:border-[var(--color-accent)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] px-4 py-3 text-[var(--color-text-primary)] transition-colors duration-150 resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-[var(--color-accent)] text-[var(--color-text-inverse)] hover:bg-[var(--color-accent-hover)] font-heading font-bold py-4 tracking-wider transition-colors duration-150 shadow-[var(--shadow-sm)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">[ ENVIAR DADOS DO PROJETO PARA PEDRO ]</button>
+          </form>
+          <div class="border border-[var(--color-border)] bg-[var(--color-bg-secondary)] p-8 space-y-6 flex flex-col justify-between min-h-[500px] h-full">
+            <div>
+              <h3 class="font-heading font-semibold text-lg text-[var(--color-accent)]">[ INTERATIVO 3D ]</h3>
+              <p class="text-sm text-[var(--color-text-secondary)] mt-2">Área selecionada: <span id="selected-location-text" class="text-[var(--color-accent)] font-bold">Nenhuma</span></p>
+            </div>
+            <div id="form-canvas-container" class="flex-1 border border-[var(--color-border)] bg-[var(--color-bg-primary)] flex items-center justify-center min-h-[300px] relative">
+              <div id="form-fallback" class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                <span class="text-[var(--color-text-muted)] font-heading text-xs uppercase tracking-widest mb-4">[ Seleção de Local ]</span>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <button type="button" onclick="window.selectLocationFallback('Ombro')" class="px-3 py-1 bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] hover:border-[var(--color-accent)] text-xs font-heading focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">OMBRO</button>
+                  <button type="button" onclick="window.selectLocationFallback('Antebraço')" class="px-3 py-1 bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] hover:border-[var(--color-accent)] text-xs font-heading focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">ANTEBRAÇO</button>
+                  <button type="button" onclick="window.selectLocationFallback('Perna')" class="px-3 py-1 bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] hover:border-[var(--color-accent)] text-xs font-heading focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">PERNA</button>
+                </div>
+              </div>
+            </div>
+            <button type="button" id="confirm-location-btn" class="w-full border border-[var(--color-accent)] text-[var(--color-accent)] hover:bg-[var(--color-accent-subtle)] font-heading font-bold py-3 tracking-wider transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">[ CONFIRMAR LOCAL & AVANÇAR ]</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-6 py-8 text-center text-xs font-heading tracking-widest text-[var(--color-text-muted)] space-y-4">
+    <p>PEDRO // FINELINE & MICROREALISMO © 2026. TODOS OS DIREITOS RESERVADOS.</p>
+    <p class="pt-2">
+      <a href="https://wa.me/5515996603395" target="_blank" rel="noopener" class="inline-block text-[var(--color-accent)] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] px-2 py-1">[ CLIQUE AQUI PARA CONTATO DIRETO VIA WHATSAPP: +55 (15) 99660-3395 ]</a>
+    </p>
+  </footer>
+</body>
+</html>
