@@ -13,18 +13,36 @@ document.addEventListener('DOMContentLoaded', () => {
   if (fallback) fallback.style.display = 'none';
 
   const scene = new THREE.Scene();
+  const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(container.clientWidth, container.clientHeight);
   container.appendChild(renderer.domElement);
 
+  const handleError = (err) => {
+    console.error("Erro no carregamento da textura (CORS/caminho):", err);
+    if (fallback) fallback.style.display = 'block';
+    const canvas = container.querySelector('canvas');
+    if (canvas) canvas.style.display = 'none';
+  };
+
   const loader = new THREE.TextureLoader();
-  const texture = loader.load('assets/pescaestrela.png', (tex) => {
-    tex.minFilter = THREE.LinearFilter;
-    tex.generateMipmaps = false;
-    updateAspect();
-  });
-  const depthMap = loader.load('assets/pescaestrela_depth.png');
+  const texture = loader.load(
+    'assets/pescaestrela.png',
+    (tex) => {
+      tex.minFilter = THREE.LinearFilter;
+      tex.generateMipmaps = false;
+      updateAspect();
+    },
+    undefined,
+    handleError
+  );
+  const depthMap = loader.load(
+    'assets/pescaestrela_depth.png',
+    undefined,
+    undefined,
+    handleError
+  );
 
   const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
   const uvScale = new THREE.Vector2(1, 1);
@@ -105,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mouse.x += (mouse.targetX - mouse.x) * 0.08;
     mouse.y += (mouse.targetY - mouse.y) * 0.08;
     material.uniforms.u_mouse.value.set(mouse.x, -mouse.y);
-    renderer.render(scene, null);
+    renderer.render(scene, camera);
   };
   animate();
 });
