@@ -15,7 +15,7 @@
   <script>tailwind.config = { theme: { extend: { fontFamily: { heading: ['"Space Grotesk"', 'system-ui', 'sans-serif'], body: ['Satoshi', 'system-ui', 'sans-serif'] } } } }</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script type="module" src="js/form.js"></script>
-  <script type="module" src="js/three-anatomy.js"></script>
+  <script type="module" src="js/parallax.js"></script>
 </head>
 <body class="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] font-body antialiased selection:bg-[var(--color-accent)] selection:text-[var(--color-text-inverse)]">
   <header class="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-bg-secondary)]/90 backdrop-blur-md px-6 py-4 flex justify-between items-center">
@@ -75,13 +75,13 @@
     </section>
     <section id="orcamento" class="px-6 py-16 md:py-24 bg-[var(--color-bg-primary)]">
       <div class="max-w-6xl mx-auto space-y-12">
-        <div class="max-w-3xl">
+        <div class="max-w-3xl mx-auto text-center">
           <span class="text-[var(--color-accent)] font-heading text-sm uppercase tracking-widest font-semibold">[ 03 / AGENDAR ]</span>
-          <h2 class="font-heading font-bold text-3xl md:text-4xl mt-2 leading-tight">SIMULE O LOCAL E ORCE O SEU PROJETO EXCLUSIVO</h2>
-          <p class="text-[var(--color-text-secondary)] mt-4 leading-normal">Defina onde a arte ficará no seu corpo pelo simulador anatômico 3D ou use os botões de fallback abaixo.</p>
+          <h2 class="font-heading font-bold text-3xl md:text-4xl mt-2 leading-tight">SOLICITAR ORÇAMENTO DO SEU PROJETO EXCLUSIVO</h2>
+          <p class="text-[var(--color-text-secondary)] mt-4 leading-normal">Preencha o formulário abaixo com os detalhes da sua ideia e Pedro entrará em contato para alinhar o seu projeto autoral.</p>
         </div>
-        <div class="grid md:grid-cols-2 gap-12 items-start">
-          <form class="space-y-6 border border-[var(--color-border)] p-8 bg-[var(--color-bg-secondary)]" onsubmit="event.preventDefault();">
+        <div class="w-full">
+          <form class="max-w-2xl mx-auto space-y-6 border border-[var(--color-border)] p-8 bg-[var(--color-bg-secondary)]" onsubmit="event.preventDefault();">
             <input type="hidden" name="localizacao" id="localizacao-input" value="Não especificado">
             <div>
               <label class="block text-xs font-heading uppercase text-[var(--color-text-secondary)] tracking-wider mb-2">Como prefere ser chamado(a)?</label>
@@ -109,23 +109,6 @@
             </div>
             <button type="submit" class="w-full bg-[var(--color-accent)] text-[var(--color-text-inverse)] hover:bg-[var(--color-accent-hover)] font-heading font-bold py-4 tracking-wider transition-colors duration-150 shadow-[var(--shadow-sm)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">[ ENVIAR DADOS DO PROJETO PARA PEDRO ]</button>
           </form>
-          <div class="border border-[var(--color-border)] bg-[var(--color-bg-secondary)] p-8 space-y-6 flex flex-col justify-between min-h-[500px] h-full">
-            <div>
-              <h3 class="font-heading font-semibold text-lg text-[var(--color-accent)]">[ INTERATIVO 3D ]</h3>
-              <p class="text-sm text-[var(--color-text-secondary)] mt-2">Área selecionada: <span id="selected-location-text" class="text-[var(--color-accent)] font-bold">Nenhuma</span></p>
-            </div>
-            <div id="form-canvas-container" class="flex-1 border border-[var(--color-border)] bg-[var(--color-bg-primary)] flex items-center justify-center min-h-[300px] relative">
-              <div id="form-fallback" class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
-                <span class="text-[var(--color-text-muted)] font-heading text-xs uppercase tracking-widest mb-4">[ Seleção de Local ]</span>
-                <div class="flex flex-wrap gap-2 justify-center">
-                  <button type="button" onclick="window.selectLocationFallback('Ombro')" class="px-3 py-1 bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] hover:border-[var(--color-accent)] text-xs font-heading focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">OMBRO</button>
-                  <button type="button" onclick="window.selectLocationFallback('Antebraço')" class="px-3 py-1 bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] hover:border-[var(--color-accent)] text-xs font-heading focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">ANTEBRAÇO</button>
-                  <button type="button" onclick="window.selectLocationFallback('Perna')" class="px-3 py-1 bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] hover:border-[var(--color-accent)] text-xs font-heading focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">PERNA</button>
-                </div>
-              </div>
-            </div>
-            <button type="button" id="confirm-location-btn" class="w-full border border-[var(--color-accent)] text-[var(--color-accent)] hover:bg-[var(--color-accent-subtle)] font-heading font-bold py-3 tracking-wider transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]">[ CONFIRMAR LOCAL & AVANÇAR ]</button>
-          </div>
         </div>
       </div>
     </section>
